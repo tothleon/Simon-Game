@@ -8,7 +8,7 @@ var level = 0;
 
 var buttonColours = ["red", "blue", "green", "yellow"];
 
-$(document).keypress(function () {
+$(document).keypress(() => {
   if (started === false) {
     $("#level-title").text("Level" + level);
     started = true;
@@ -21,7 +21,7 @@ $(document).keypress(function () {
 function checkAnswer(currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
     if (userClickedPattern.length === gamePattern.length) {
-      setTimeout(function () {
+      setTimeout(() => {
         nextSequence();
       }, 1000);
     }
